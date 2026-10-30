@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Brasileira Ananindeua | Móveis Planejados de Alto Padrão</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM0YjJmMjYiLz48cmVjdCB4PSIxMTYiIHk9IjEwMSIgd2lkdGg9IjI2OCIgaGVpZ2h0PSIyMzkiIHJ4PSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkMzVhIiBzdHJva2Utd2lkdGg9IjEwIi8+PHRleHQgeD0iMjUwIiB5PSIyMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmQzNWEiIGZvbnQtZmFtaWx5PSJJbXBhY3QsQXJpYWwgTmFycm93LHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDciIHRleHRMZW5ndGg9IjIwNSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIj5DQVNBPC90ZXh0Pjx0ZXh0IHg9IjI1MCIgeT0iMjY0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZkMzVhIiBmb250LWZhbWlseT0iSW1wYWN0LEFyaWFsIE5hcnJvdyxzYW5zLXNlcmlmIiBmb250LXNpemU9IjQwIiB0ZXh0TGVuZ3RoPSIyMTgiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyI+QlJBU0lMRUlSQTwvdGV4dD48dGV4dCB4PSIyNTAiIHk9IjQxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDM1YSIgZm9udC1mYW1pbHk9IkltcGFjdCxBcmlhbCBOYXJyb3csc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMiIgdGV4dExlbmd0aD0iMTc0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiPkFOQU5JTkRFVUE8L3RleHQ+PC9zdmc+">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C5A059',
+              darkGold: '#A37F3E',
+              wood: '#2C221E',
+              cream: '#F9F6F0',
+              charcoal: '#1A1A1A',
+              softGrey: '#F3F4F6'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body { overflow-x: hidden; }
+    .gradient-overlay {
+      background: linear-gradient(180deg, rgba(26,26,26,0.72) 0%, rgba(26,26,26,0.92) 100%);
+    }
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+      background-position: center;
+      background-size: cover;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #1A1A1A; }
+    ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 4px; }
+
+    /* Custom range slider */
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background: #C5A059;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(197, 160, 89, 0.7);
+      border: 2px solid #ffffff;
+      transition: transform 0.1s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+    input[type=range]::-moz-range-thumb {
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+      background: #C5A059;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(197, 160, 89, 0.7);
+      border: 2px solid #ffffff;
+    }
+  
+    /* ===== HERO SCROLL-SCRUB (sequência de frames) ===== */
+    #hero-scroll{position:relative;height:600vh;background:#14110f}
+    #hero-stage{position:sticky;top:0;height:100vh;overflow:hidden}
+    #hero-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+    .hero-scrim{position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(180deg,rgba(20,17,15,.45) 0%,rgba(20,17,15,0) 28%,rgba(20,17,15,0) 55%,rgba(20,17,15,.82) 100%)}
+    .hero-cap{position:absolute;left:0;right:0;bottom:10vh;text-align:center;padding:0 1.25rem;opacity:0;pointer-events:none;will-change:opacity,transform;color:#F9F6F0}
+    .hero-cap.first{bottom:auto;top:24vh;color:#2C221E}
+    .hero-cap h1,.hero-cap h2{font-family:'Playfair Display',serif;font-weight:600;line-height:1.1;font-size:clamp(2.1rem,6vw,4.6rem)}
+    .hero-cap:not(.first) h2{text-shadow:0 4px 30px rgba(0,0,0,.55)}
+    .hero-cap em{color:#C5A059;font-weight:400}
+    .hero-cap p{font-weight:300;margin-top:1rem;font-size:clamp(.95rem,1.6vw,1.15rem)}
+    .hero-cap .cta{pointer-events:auto}
+    #hero-bar{position:absolute;right:1.25rem;top:50%;transform:translateY(-50%);width:2px;height:120px;background:rgba(120,120,120,.35);border-radius:2px;z-index:5}
+    #hero-bar i{display:block;width:100%;height:0;background:#C5A059;border-radius:2px}
+    #hero-hint{position:absolute;left:50%;bottom:3vh;transform:translateX(-50%);color:#8a6a2c;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;z-index:5;transition:opacity .4s}
+    #hero-load{position:absolute;inset:0;z-index:20;background:#14110f;color:#C5A059;display:flex;align-items:center;justify-content:center;font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;transition:opacity .6s}
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-[#C5A059] selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- NAVBAR / MENU SUPERIOR COM O LOGOTIPO OFICIAL                             -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-0 left-0 right-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300 shadow-sm" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logotipo Oficial -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <img 
+            src="https://pps.whatsapp.net/v/t61.24694-24/785279711_1622144032944541_921077418259081982_n.jpg?ccb=11-4&amp;oh=01_Q5Aa5wEOlhv-97SvDoq7BHqHKdJ-CyRhxO25i9aALUHgpKv6OQ&amp;oe=6AE51B28&amp;_nc_sid=5e03e0&amp;_nc_cat=101" 
+            onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM0YjJmMjYiLz48cmVjdCB4PSIxMTYiIHk9IjEwMSIgd2lkdGg9IjI2OCIgaGVpZ2h0PSIyMzkiIHJ4PSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkMzVhIiBzdHJva2Utd2lkdGg9IjEwIi8+PHRleHQgeD0iMjUwIiB5PSIyMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmQzNWEiIGZvbnQtZmFtaWx5PSJJbXBhY3QsQXJpYWwgTmFycm93LHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDciIHRleHRMZW5ndGg9IjIwNSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIj5DQVNBPC90ZXh0Pjx0ZXh0IHg9IjI1MCIgeT0iMjY0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZkMzVhIiBmb250LWZhbWlseT0iSW1wYWN0LEFyaWFsIE5hcnJvdyxzYW5zLXNlcmlmIiBmb250LXNpemU9IjQwIiB0ZXh0TGVuZ3RoPSIyMTgiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyI+QlJBU0lMRUlSQTwvdGV4dD48dGV4dCB4PSIyNTAiIHk9IjQxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDM1YSIgZm9udC1mYW1pbHk9IkltcGFjdCxBcmlhbCBOYXJyb3csc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMiIgdGV4dExlbmd0aD0iMTc0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiPkFOQU5JTkRFVUE8L3RleHQ+PC9zdmc+';"
+            alt="Casa Brasileira Ananindeua" 
+            class="w-12 h-12 rounded-xl object-cover ring-2 ring-[#C5A059]/40 shadow-md group-hover:scale-105 transition-transform duration-300"
+          >
+          <div class="flex flex-col">
+            <span class="text-xl font-bold tracking-tight text-[#2C221E] font-serif uppercase">Casa Brasileira</span>
+            <span class="text-[11px] tracking-widest text-[#C5A059] uppercase font-semibold">Ananindeua • Móveis Planejados</span>
+          </div>
+        </a>
+
+        <!-- Links Desktop -->
+        <nav class="hidden md:flex items-center space-x-7 font-medium text-sm text-gray-600">
+          <a href="#sobre" class="hover:text-[#C5A059] transition-colors py-1">Sobre Nós</a>
+          <a href="#ambientes" class="hover:text-[#C5A059] transition-colors py-1">Ambientes</a>
+          <a href="#diferenciais" class="hover:text-[#C5A059] transition-colors py-1">Diferenciais</a>
+          <a href="#simulador" class="hover:text-[#C5A059] transition-colors py-1">Simulador</a>
+          <a href="#contato" class="hover:text-[#C5A059] transition-colors py-1">Contato</a>
+        </nav>
+
+        <!-- Botão CTA -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://api.whatsapp.com/send/?phone=559182850000&text&type=phone_number&app_absent=0&utm_source=ig" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="bg-[#C5A059] hover:bg-[#A37F3E] text-white font-semibold px-5 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 transform hover:-translate-y-0.5 text-sm">
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span>Falar no WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Botão Menu Mobile -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-[#C5A059] focus:outline-none p-2" aria-label="Abrir Menu">
+          <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Gaveta Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-3 pb-6 space-y-3">
+      <div class="flex items-center gap-3 pb-3 border-b border-gray-100">
+        <img 
+          src="https://pps.whatsapp.net/v/t61.24694-24/785279711_1622144032944541_921077418259081982_n.jpg?ccb=11-4&amp;oh=01_Q5Aa5wEOlhv-97SvDoq7BHqHKdJ-CyRhxO25i9aALUHgpKv6OQ&amp;oe=6AE51B28&amp;_nc_sid=5e03e0&amp;_nc_cat=101" 
+          onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM0YjJmMjYiLz48cmVjdCB4PSIxMTYiIHk9IjEwMSIgd2lkdGg9IjI2OCIgaGVpZ2h0PSIyMzkiIHJ4PSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkMzVhIiBzdHJva2Utd2lkdGg9IjEwIi8+PHRleHQgeD0iMjUwIiB5PSIyMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmQzNWEiIGZvbnQtZmFtaWx5PSJJbXBhY3QsQXJpYWwgTmFycm93LHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDciIHRleHRMZW5ndGg9IjIwNSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIj5DQVNBPC90ZXh0Pjx0ZXh0IHg9IjI1MCIgeT0iMjY0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZkMzVhIiBmb250LWZhbWlseT0iSW1wYWN0LEFyaWFsIE5hcnJvdyxzYW5zLXNlcmlmIiBmb250LXNpemU9IjQwIiB0ZXh0TGVuZ3RoPSIyMTgiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyI+QlJBU0lMRUlSQTwvdGV4dD48dGV4dCB4PSIyNTAiIHk9IjQxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDM1YSIgZm9udC1mYW1pbHk9IkltcGFjdCxBcmlhbCBOYXJyb3csc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMiIgdGV4dExlbmd0aD0iMTc0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiPkFOQU5JTkRFVUE8L3RleHQ+PC9zdmc+';"
+          alt="Casa Brasileira Ananindeua" 
+          class="w-10 h-10 rounded-lg object-cover ring-1 ring-[#C5A059]/40"
+        >
+        <div>
+          <p class="font-bold text-[#2C221E] text-sm font-serif uppercase">Casa Brasileira Ananindeua</p>
+          <p class="text-[10px] text-[#C5A059] uppercase tracking-wider font-semibold">Móveis Planejados</p>
+        </div>
+      </div>
+      <a href="#sobre" class="mobile-link block py-2 text-gray-700 font-medium hover:text-[#C5A059]">Sobre Nós</a>
+      <a href="#ambientes" class="mobile-link block py-2 text-gray-700 font-medium hover:text-[#C5A059]">Ambientes</a>
+      <a href="#diferenciais" class="mobile-link block py-2 text-gray-700 font-medium hover:text-[#C5A059]">Diferenciais</a>
+      <a href="#simulador" class="mobile-link block py-2 text-gray-700 font-medium hover:text-[#C5A059]">Simulador</a>
+      <a href="#contato" class="mobile-link block py-2 text-gray-700 font-medium hover:text-[#C5A059]">Contato</a>
+      <a href="https://api.whatsapp.com/send/?phone=559182850000&text&type=phone_number&app_absent=0&utm_source=ig" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="block w-full text-center bg-[#C5A059] text-white font-semibold py-3 rounded-lg shadow mt-2">
+        <i class="fab fa-whatsapp text-lg mr-2"></i> Falar com a Empresa
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION                                                              -->
+  <!-- ========================================================================= -->
+  <section id="hero-scroll" aria-label="Montagem do closet planejado">
+    <div id="hero-stage">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-scrim"></div>
+      <div class="hero-cap first" data-in="0" data-out="0.17"><h1>Projete a sua <em>história.</em></h1><p>Um espaço vazio é só o começo. Role para ver ele ganhar vida.</p></div>
+      <div class="hero-cap" data-in="0.2" data-out="0.4"><h2>Tudo começa pela <em>estrutura.</em></h2><p>Painéis e módulos sob medida, do piso ao teto.</p></div>
+      <div class="hero-cap" data-in="0.42" data-out="0.62"><h2>Madeira, nichos e <em>precisão.</em></h2><p>Gavetas e prateleiras projetadas milimetricamente.</p></div>
+      <div class="hero-cap" data-in="0.64" data-out="0.82"><h2>A luz revela o que <em>importa.</em></h2><p>Cabideiros preenchidos e iluminação LED embutida.</p></div>
+      <div class="hero-cap" data-in="0.85" data-out="1.01">
+        <h2>Seu closet. Seu lar. <em>Seu estilo.</em></h2><p>Móveis planejados de alto padrão em Ananindeua.</p>
+        <a class="cta inline-flex items-center gap-2 mt-6 bg-[#C5A059] hover:bg-[#A37F3E] text-white font-semibold px-8 py-4 rounded-full shadow-xl transition" href="https://api.whatsapp.com/send/?phone=559182850000&text&type=phone_number&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp text-lg"></i> Agendar um Projeto</a>
+      </div>
+      <div id="hero-bar"><i></i></div>
+      <div id="hero-hint">Role para montar</div>
+      <div id="hero-load">Carregando <span id="hero-pct" style="margin-left:.6em">0%</span></div>
+    </div>
+  </section>
+
+  
+
+  <!-- QUEM SOMOS / SOBRE                                                        -->
+  <!-- ========================================================================= -->
+  <section id="sobre" class="py-20 bg-[#F9F6F0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="Showroom Casa Brasileira" class="w-full h-[500px] object-cover">
+          </div>
+          <div class="absolute -bottom-6 -right-6 bg-[#2C221E] text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+            <i class="fas fa-quote-left text-[#C5A059] text-2xl mb-2"></i>
+            <p class="text-sm font-light italic">"Criando espaços únicos e cheios de personalidade para a sua vida."</p>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="inline-block text-[#C5A059] font-semibold text-sm tracking-wider uppercase">
+            A Casa Brasileira em Ananindeua
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">
+            Tradição, Qualidade e Paixão pelo Design
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            A <strong>Casa Brasileira Ananindeua</strong> traz para o Pará o melhor em conceitos de móveis planejados, unindo tecnologia industrial de ponta com o cuidado artesanal do design sob medida.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Nossa equipe de consultores e projetistas dedica-se a entender a sua rotina, garantindo que cada armário, gaveta e painel atenda perfeitamente às necessidades da sua família, seja para apartamentos compactos, residências amplas ou ambientes corporativos.
+          </p>
+          
+          <ul class="space-y-3 pt-2">
+            <li class="flex items-center gap-3 text-gray-700">
+              <i class="fas fa-check-circle text-[#C5A059] text-lg"></i>
+              <span>Acompanhamento personalizado em todas as etapas</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-700">
+              <i class="fas fa-check-circle text-[#C5A059] text-lg"></i>
+              <span>Planejamento personalizado para melhor aproveitamento do espaço</span>
+            </li>
+            <li class="flex items-center gap-3 text-gray-700">
+              <i class="fas fa-check-circle text-[#C5A059] text-lg"></i>
+              <span>Equipe própria de montagem e rigor no prazo</span>
+            </li>
+          </ul>
+
+          <div class="pt-4">
+            <a href="https://www.instagram.com/casabrasileira.ananindeua/" target="_blank" class="inline-flex items-center gap-2 text-[#2C221E] hover:text-[#C5A059] font-semibold transition-colors">
+              <i class="fab fa-instagram text-xl"></i>
+              <span>Siga nosso Instagram @casabrasileira.ananindeua</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- AMBIENTES / GALERIA                                                       -->
+  <!-- ========================================================================= -->
+  <section id="ambientes" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-[#C5A059] font-semibold text-sm tracking-wider uppercase">Nossos Ambientes</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">Planejados para Cada Espaço</h2>
+        <p class="text-gray-600">Explore como transformamos cada cantinho do seu lar em uma experiência de conforto e organização.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Cozinhas -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Cozinha Planejada" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
+            <span class="text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-1">Praticidade & Estilo</span>
+            <h3 class="text-2xl font-serif font-bold">Cozinhas</h3>
+            <p class="text-sm text-gray-200 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Otimização de espaço, torres quentes, ilhas e soluções de armazenamento inteligente.</p>
+          </div>
+        </div>
+
+        <!-- Dormitórios -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Dormitório Planejado" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
+            <span class="text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-1">Conforto & Aconchego</span>
+            <h3 class="text-2xl font-serif font-bold">Dormitórios & Closets</h3>
+            <p class="text-sm text-gray-200 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Quartos aconchegantes com cabeceiras, armários com iluminação LED e closets funcionais.</p>
+          </div>
+        </div>
+
+        <!-- Salas -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Sala de Estar Planejada" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
+            <span class="text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-1">Convivência & Design</span>
+            <h3 class="text-2xl font-serif font-bold">Salas & Home Theater</h3>
+            <p class="text-sm text-gray-200 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Painéis imponentes, nichos integrados e ambientes modernos para receber visitas.</p>
+          </div>
+        </div>
+
+        <!-- Banheiros -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Banheiro Planejado" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
+            <span class="text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-1">Sofisticação Diária</span>
+            <h3 class="text-2xl font-serif font-bold">Banheiros & Lavabos</h3>
+            <p class="text-sm text-gray-200 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Armários suspensos resistentes à umidade, espelheiras e acabamentos finos.</p>
+          </div>
+        </div>
+
+        <!-- Home Office -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?auto=format&fit=crop&w=800&q=80" alt="Home Office Planejado" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
+            <span class="text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-1">Foco & Produtividade</span>
+            <h3 class="text-2xl font-serif font-bold">Home Office</h3>
+            <p class="text-sm text-gray-200 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Mobiliário ergonômico, passa-fios embutidos e estantes organizadoras.</p>
+          </div>
+        </div>
+
+        <!-- Área Gourmet -->
+        <div class="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Área Gourmet Planejada" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
+            <span class="text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-1">Lazer & Celebração</span>
+            <h3 class="text-2xl font-serif font-bold">Áreas Gourmet</h3>
+            <p class="text-sm text-gray-200 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Bancadas elegantes, adegas climatizadas e armários sob medida para churrasqueiras.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- DIFERENCIAIS                                                              -->
+  <!-- ========================================================================= -->
+  <section id="diferenciais" class="py-20 bg-[#F3F4F6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-[#C5A059] font-semibold text-sm tracking-wider uppercase">Por que escolher a Casa Brasileira</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">Diferenciais que Fazem a Diferença</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-[#F9F6F0] text-[#C5A059] rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2C221E] mb-3">5 Anos de Garantia</h3>
+          <p class="text-gray-600 text-sm">Tranquilidade e segurança de fábrica com suporte técnico dedicado.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-[#F9F6F0] text-[#C5A059] rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+            <i class="fas fa-cubes"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2C221E] mb-3">Materiais Nobres</h3>
+          <p class="text-gray-600 text-sm">MDF de alta densidade resistente à umidade, ferragens alemãs e pintura impecável.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-[#F9F6F0] text-[#C5A059] rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2C221E] mb-3">Projeto Sob Medida</h3>
+          <p class="text-gray-600 text-sm">Visualize cores, iluminação e texturas antes mesmo do início da montagem.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow text-center">
+          <div class="w-16 h-16 bg-[#F9F6F0] text-[#C5A059] rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="text-xl font-bold text-[#2C221E] mb-3">Montagem Limpa</h3>
+          <p class="text-gray-600 text-sm">Equipe treinada, pontualidade rigorosa e respeito ao seu imóvel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SIMULADOR DE PROJETO                                                      -->
+  <!-- ========================================================================= -->
+  <section id="simulador" class="py-20 bg-[#2C221E] text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12 space-y-4">
+        <span class="text-[#C5A059] font-semibold text-sm tracking-widest uppercase">Simulador de Projeto</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold">Planeje seu Ambiente Conosco</h2>
+        <p class="text-gray-300">Selecione quais cômodos você deseja mobiliar e envie diretamente para a nossa equipe no WhatsApp!</p>
+      </div>
+
+      <form onsubmit="sendSimulation(event)" class="bg-white/10 backdrop-blur-md p-8 sm:p-10 rounded-2xl border border-white/20 shadow-2xl">
+        <p class="font-medium text-lg mb-4 text-[#C5A059]">1. Escolha os ambientes:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+          <label class="cursor-pointer">
+            <input type="checkbox" value="Cozinha" class="hidden peer room-checkbox" checked>
+            <div class="p-4 rounded-xl border border-white/20 bg-white/5 text-center peer-checked:bg-[#C5A059] peer-checked:border-[#C5A059] transition-all hover:bg-white/10">
+              <i class="fas fa-utensils block text-2xl mb-2"></i>
+              <span class="text-sm font-semibold">Cozinha</span>
+            </div>
+          </label>
+          <label class="cursor-pointer">
+            <input type="checkbox" value="Dormitório" class="hidden peer room-checkbox">
+            <div class="p-4 rounded-xl border border-white/20 bg-white/5 text-center peer-checked:bg-[#C5A059] peer-checked:border-[#C5A059] transition-all hover:bg-white/10">
+              <i class="fas fa-bed block text-2xl mb-2"></i>
+              <span class="text-sm font-semibold">Dormitório</span>
+            </div>
+          </label>
+          <label class="cursor-pointer">
+            <input type="checkbox" value="Sala / Home" class="hidden peer room-checkbox">
+            <div class="p-4 rounded-xl border border-white/20 bg-white/5 text-center peer-checked:bg-[#C5A059] peer-checked:border-[#C5A059] transition-all hover:bg-white/10">
+              <i class="fas fa-tv block text-2xl mb-2"></i>
+              <span class="text-sm font-semibold">Sala / Home</span>
+            </div>
+          </label>
+          <label class="cursor-pointer">
+            <input type="checkbox" value="Banheiro" class="hidden peer room-checkbox">
+            <div class="p-4 rounded-xl border border-white/20 bg-white/5 text-center peer-checked:bg-[#C5A059] peer-checked:border-[#C5A059] transition-all hover:bg-white/10">
+              <i class="fas fa-bath block text-2xl mb-2"></i>
+              <span class="text-sm font-semibold">Banheiro</span>
+            </div>
+          </label>
+          <label class="cursor-pointer">
+            <input type="checkbox" value="Home Office" class="hidden peer room-checkbox">
+            <div class="p-4 rounded-xl border border-white/20 bg-white/5 text-center peer-checked:bg-[#C5A059] peer-checked:border-[#C5A059] transition-all hover:bg-white/10">
+              <i class="fas fa-laptop-house block text-2xl mb-2"></i>
+              <span class="text-sm font-semibold">Home Office</span>
+            </div>
+          </label>
+          <label class="cursor-pointer">
+            <input type="checkbox" value="Área Gourmet" class="hidden peer room-checkbox">
+            <div class="p-4 rounded-xl border border-white/20 bg-white/5 text-center peer-checked:bg-[#C5A059] peer-checked:border-[#C5A059] transition-all hover:bg-white/10">
+              <i class="fas fa-glass-cheers block text-2xl mb-2"></i>
+              <span class="text-sm font-semibold">Área Gourmet</span>
+            </div>
+          </label>
+        </div>
+
+        <p class="font-medium text-lg mb-4 text-[#C5A059]">2. Dados para contato:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <input type="text" id="simName" placeholder="Seu Nome Completo" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-[#C5A059]">
+          <input type="tel" id="simPhone" placeholder="Seu Telefone / WhatsApp" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-[#C5A059]">
+        </div>
+
+        <button type="submit" class="w-full bg-[#C5A059] hover:bg-[#A37F3E] text-white font-bold py-4 rounded-xl shadow-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          <span>Enviar Solicitação pelo WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- DEPOIMENTOS                                                               -->
+  <!-- ========================================================================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-[#C5A059] font-semibold text-sm tracking-wider uppercase">Satisfação Garantida</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E]">O que nossos clientes dizem</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-[#F9F6F0] p-8 rounded-2xl space-y-4">
+          <div class="flex text-[#C5A059] space-x-1">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic text-sm">"Atendimento impecável do início ao fim! Minha cozinha ficou surreal de bonita e a entrega foi exatamente no prazo combinado."</p>
+          <div class="pt-4 border-t border-gray-200">
+            <p class="font-bold text-[#2C221E] text-sm">Mariana Rocha</p>
+            <p class="text-xs text-gray-500">Coqueiro, Ananindeua</p>
+          </div>
+        </div>
+
+        <div class="bg-[#F9F6F0] p-8 rounded-2xl space-y-4">
+          <div class="flex text-[#C5A059] space-x-1">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic text-sm">"A equipe de montagem é extremamente atenciosa e caprichosa. O projeto 3D foi idêntico ao resultado final do meu apartamento!"</p>
+          <div class="pt-4 border-t border-gray-200">
+            <p class="font-bold text-[#2C221E] text-sm">Carlos & Juliana</p>
+            <p class="text-xs text-gray-500">Cidade Nova, Ananindeua</p>
+          </div>
+        </div>
+
+        <div class="bg-[#F9F6F0] p-8 rounded-2xl space-y-4">
+          <div class="flex text-[#C5A059] space-x-1">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic text-sm">"Super recomendo a Casa Brasileira. Qualidade do acabamento dos armários é excelente. Valeu cada centavo investido!"</p>
+          <div class="pt-4 border-t border-gray-200">
+            <p class="font-bold text-[#2C221E] text-sm">Dr. Roberto Lima</p>
+            <p class="text-xs text-gray-500">Ananindeua, PA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CONTATO & LOCALIZAÇÃO                                                     -->
+  <!-- ========================================================================= -->
+  <section id="contato" class="py-20 bg-[#F3F4F6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="space-y-8">
+          <div>
+            <span class="text-[#C5A059] font-semibold text-sm tracking-wider uppercase">Venha nos Visitar</span>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-[#2C221E] mt-2">Nosso Showroom em Ananindeua</h2>
+            <p class="text-gray-600 mt-4">Venha tomar um café conosco, conhecer nossas amostras de materiais e conversar com um de nossos projetistas especializados.</p>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white text-[#C5A059] rounded-xl flex items-center justify-center text-xl shadow shrink-0">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#2C221E]">Endereço</h4>
+                <p class="text-gray-600 text-sm">Av. Três Corações, 01, salas 08 e 09 - Coqueiro, Ananindeua - PA, 67130-850</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white text-[#C5A059] rounded-xl flex items-center justify-center text-xl shadow shrink-0">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#2C221E]">Horário de Funcionamento</h4>
+                <p class="text-gray-600 text-sm">Segunda a Sexta: 08:30h às 18:30h | Sábado: 08:30h às 12:30h</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white text-[#C5A059] rounded-xl flex items-center justify-center text-xl shadow shrink-0">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-[#2C221E]">Telefone / WhatsApp</h4>
+                <p class="text-gray-600 text-sm">(91) 8285-0000</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-4 pt-4">
+            <a href="https://www.instagram.com/casabrasileira.ananindeua/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[#2C221E] text-white rounded-xl flex items-center justify-center hover:bg-[#C5A059] transition-colors text-xl">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=559182850000&text&type=phone_number&app_absent=0&utm_source=ig" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[#2C221E] text-white rounded-xl flex items-center justify-center hover:bg-[#C5A059] transition-colors text-xl">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200 h-[450px]">
+          <iframe 
+            src="https://www.google.com/maps?q=Casa+Brasileira+Ananindeua,+Av.+Tr%C3%AAs+Cora%C3%A7%C3%B5es,+01,+Ananindeua+-+PA&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- RODAPÉ COM O LOGOTIPO OFICIAL                                             -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#2C221E] text-white py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3.5">
+          <img 
+            src="https://pps.whatsapp.net/v/t61.24694-24/785279711_1622144032944541_921077418259081982_n.jpg?ccb=11-4&amp;oh=01_Q5Aa5wEOlhv-97SvDoq7BHqHKdJ-CyRhxO25i9aALUHgpKv6OQ&amp;oe=6AE51B28&amp;_nc_sid=5e03e0&amp;_nc_cat=101" 
+            onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM0YjJmMjYiLz48cmVjdCB4PSIxMTYiIHk9IjEwMSIgd2lkdGg9IjI2OCIgaGVpZ2h0PSIyMzkiIHJ4PSIyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkMzVhIiBzdHJva2Utd2lkdGg9IjEwIi8+PHRleHQgeD0iMjUwIiB5PSIyMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmQzNWEiIGZvbnQtZmFtaWx5PSJJbXBhY3QsQXJpYWwgTmFycm93LHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDciIHRleHRMZW5ndGg9IjIwNSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIj5DQVNBPC90ZXh0Pjx0ZXh0IHg9IjI1MCIgeT0iMjY0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZkMzVhIiBmb250LWZhbWlseT0iSW1wYWN0LEFyaWFsIE5hcnJvdyxzYW5zLXNlcmlmIiBmb250LXNpemU9IjQwIiB0ZXh0TGVuZ3RoPSIyMTgiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyI+QlJBU0lMRUlSQTwvdGV4dD48dGV4dCB4PSIyNTAiIHk9IjQxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZDM1YSIgZm9udC1mYW1pbHk9IkltcGFjdCxBcmlhbCBOYXJyb3csc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMiIgdGV4dExlbmd0aD0iMTc0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiPkFOQU5JTkRFVUE8L3RleHQ+PC9zdmc+';"
+            alt="Casa Brasileira Ananindeua" 
+            class="w-11 h-11 rounded-xl object-cover ring-1 ring-[#C5A059]/40 shadow-sm"
+          >
+          <div>
+            <span class="text-xl font-bold font-serif uppercase tracking-tight">Casa Brasileira Ananindeua</span>
+            <p class="text-xs text-gray-400 mt-0.5">© 2026 Casa Brasileira Ananindeua. Todos os direitos reservados.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+          <a href="#sobre" class="hover:text-[#C5A059] transition-colors">Sobre</a>
+          <a href="#ambientes" class="hover:text-[#C5A059] transition-colors">Ambientes</a>
+          <a href="#simulador" class="hover:text-[#C5A059] transition-colors">Simulador</a>
+          <a href="#contato" class="hover:text-[#C5A059] transition-colors">Contato</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: COMPORTAMENTOS DO SITE     -->
+  <!-- ========================================================================= -->
+  <script>
+    /* 1. Menu Mobile */
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      } else {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+      }
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    /* 2. Simulador WhatsApp */
+    function sendSimulation(e) {
+      e.preventDefault();
+      const name = document.getElementById('simName').value;
+      const phone = document.getElementById('simPhone').value;
+      
+      const selectedRooms = [];
+      document.querySelectorAll('.room-checkbox:checked').forEach(cb => {
+        selectedRooms.push(cb.value);
+      });
+
+      if (selectedRooms.length === 0) {
+        alert('Por favor, selecione pelo menos um ambiente.');
+        return;
+      }
+
+      const roomsText = selectedRooms.join(', ');
+      const message = `Olá! Meu nome é *${encodeURIComponent(name)}* (${encodeURIComponent(phone)}).%0A%0AEstou interessado(a) em móveis planejados para os seguintes ambientes:%0A*${encodeURIComponent(roomsText)}*%0A%0AGostaria de agendar uma consulta para meu projeto!`;
+
+      const whatsappUrl = `https://api.whatsapp.com/send/?phone=559182850000&text&type=phone_number&app_absent=0&utm_source=ig'_blank');
+    }
+
+  </script>
+
+<script>
+(function(){
+  // ===== CONFIG =====
+  const FRAME_DIR='frames/', FRAME_COUNT=120;          // frames/f_001.webp ... f_120.webp
+  const FIRST='frames/first.webp', LAST='frames/last.webp'; // imagem inicial e final
+  const V0=.04, V1=.92;      // trecho do scroll em que o vídeo roda (antes: foto 1 -> vídeo; depois: vídeo -> foto 2)
+  const canvas=document.getElementById('hero-canvas'), ctx=canvas.getContext('2d');
+  const sec=document.getElementById('hero-scroll'), caps=[...document.querySelectorAll('.hero-cap')];
+  const bar=document.querySelector('#hero-bar i'), hint=document.getElementById('hero-hint');
+  const scrim=document.querySelector('.hero-scrim'), load=document.getElementById('hero-load'), pct=document.getElementById('hero-pct');
+  const clamp=(v,a,b)=>Math.min(b,Math.max(a,v)), sm=t=>t*t*(3-2*t);
+  const img=u=>{const i=new Image();i.src=u;return i};
+  const first=img(FIRST), last=img(LAST), frames=[];
+  let loaded=0, target=0, cur=0, W=0, H=0;
+
+  for(let i=1;i<=FRAME_COUNT;i++){
+    const im=img(FRAME_DIR+'f_'+String(i).padStart(3,'0')+'.webp'); frames.push(im);
+    const done=()=>{loaded++;pct.textContent=Math.round(loaded/FRAME_COUNT*100)+'%';
+      if(loaded>=FRAME_COUNT){load.style.opacity=0;setTimeout(()=>load.style.display='none',700)}};
+    im.onload=done; im.onerror=done;
+  }
+  function resize(){
+    const d=Math.min(devicePixelRatio||1,2);
+    W=canvas.width=Math.round(innerWidth*d); H=canvas.height=Math.round(innerHeight*d); measure();
+  }
+  function draw(im,alpha){          // desenha em "cover", centralizado
+    if(!im||!im.naturalWidth||alpha<=0)return;
+    const r=Math.max(W/im.naturalWidth,H/im.naturalHeight), w=im.naturalWidth*r, h=im.naturalHeight*r;
+    ctx.globalAlpha=alpha; ctx.drawImage(im,(W-w)/2,(H-h)/2,w,h);
+  }
+  function measure(){ target=clamp(-sec.getBoundingClientRect().top/(sec.offsetHeight-innerHeight),0,1); }
+
+  function render(p){
+    ctx.globalAlpha=1; ctx.fillStyle='#14110f'; ctx.fillRect(0,0,W,H);
+    const v=clamp((p-V0)/(V1-V0),0,1)*(FRAME_COUNT-1), i=Math.floor(v), f=v-i;
+    const fa=frames[i], fb=frames[Math.min(i+1,FRAME_COUNT-1)];
+    draw(first,1);                                         // base: foto 1
+    const inV=sm(clamp(p/V0,0,1));                         // foto 1 -> vídeo
+    const outV=sm(clamp((p-V1)/(1-V1),0,1));               // vídeo -> foto 2
+    ctx.globalAlpha=1;
+    if(inV>0){ draw(fa,inV); if(f>0&&fb!==fa)draw(fb,inV*f); }   // interpola frames vizinhos
+    if(outV>0)draw(last,outV);
+    ctx.globalAlpha=1;
+    scrim.style.opacity=clamp((p-.12)/.1,0,1);
+    caps.forEach(c=>{
+      const a=+c.dataset.in,o=+c.dataset.out,fd=.04,last=o>1,first=a===0;
+      const k=Math.min(first?1:clamp((p-a)/fd,0,1), last?1:clamp((o-p)/fd,0,1));
+      c.style.opacity=k; c.style.transform='translateY('+((1-k)*18)+'px)'; c.style.pointerEvents=k>.6?'auto':'none';
+    });
+    bar.style.height=(p*100)+'%'; hint.style.opacity=p<.02?1:0;
+  }
+  (function loop(){ cur+=(target-cur)*.14; if(Math.abs(target-cur)<.0003)cur=target; render(cur); requestAnimationFrame(loop) })();
+  addEventListener('scroll',measure,{passive:true}); addEventListener('resize',resize); resize(); cur=target;
+
+  // imagens externas quebradas: fundo neutro em vez do ícone de erro
+  document.querySelectorAll('img').forEach(im=>im.addEventListener('error',()=>{
+    if(im.dataset.fb)return; im.dataset.fb=1; im.style.background='linear-gradient(135deg,#2C221E,#4b3a2c)'; im.style.minHeight=im.style.minHeight||'12rem';
+  },{once:true}));
+})();
+</script>
+</body>
+</html>
